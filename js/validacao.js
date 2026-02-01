@@ -44,17 +44,21 @@ const mensagensDeErro = {
     customError: "O CPF digitado não é válido.",
   },
   cep: {
-    valueMissing: " O campo de CEP não pode estar vazio",
-    patternMismatch: "O Cep digitado não é válido",
+    valueMissing: "O campo de CEP não pode estar vazio.",
+    patternMismatch: "O CEP digitado não é válido.",
+    customError: "Não foi possível buscar o CEP.",
   },
   logradouro: {
-    valueMissing: "O campo de logradouro não pode estar vazio",
+    valueMissing: "O campo de logradouro não pode estar vazio.",
   },
   cidade: {
-    valueMissing: "O campo de cidade não pode estar vazio",
+    valueMissing: "O campo de cidade não pode estar vazio.",
   },
   estado: {
-    valueMissing: "O campo de estado não pode estar vazio",
+    valueMissing: "O campo de estado não pode estar vazio.",
+  },
+  preco: {
+    valueMissing: "O  campo de preço não pode estar vazio ",
   },
 };
 
@@ -165,7 +169,7 @@ function confirmaDigito(soma) {
 
 function recuperarCEP(input) {
   const cep = input.value.replace(/\D/g, "");
-  const url = `https://viacep.com.br/ws/${cep}/json`;
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
   const options = {
     method: "GET",
     mode: "cors",
@@ -174,22 +178,22 @@ function recuperarCEP(input) {
     },
   };
 
-  if (input.validity.patternMismatch && !input.validity.valueMissing) {
+  if (!input.validity.patternMismatch && !input.validity.valueMissing) {
     fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
         if (data.erro) {
-          input.setCustomValidity("Não foi possível buscar o Cep");
+          input.setCustomValidity("Não foi possível buscar o CEP.");
           return;
         }
         input.setCustomValidity("");
-        preencherCampoCEP(data);
+        preencheCamposComCEP(data);
         return;
       });
   }
 }
 
-function preencherCampoCEP() {
+function preencheCamposComCEP(data) {
   const logradouro = document.querySelector('[data-tipo="logradouro"]');
   const cidade = document.querySelector('[data-tipo="cidade"]');
   const estado = document.querySelector('[data-tipo="estado"]');
