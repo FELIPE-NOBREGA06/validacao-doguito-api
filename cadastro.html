@@ -8,10 +8,12 @@
     <title>Doguito Petshop | Criar conta</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/base/base.css" />
     <link rel="stylesheet" href="./assets/css/cadastro.css" />
     <link rel="stylesheet" href="./assets/css/componentes/cartao.css" />
@@ -24,14 +26,16 @@
         <img
           src="./assets/img/doguito.svg"
           alt="Logo Doguito"
-          class="cadastro-cabecalho__logo" />
+          class="cadastro-cabecalho__logo"
+        />
         <h1 class="cadastro-cabecalho__titulo">PetShop</h1>
       </div>
       <section class="cartao">
         <h2 class="cartao__titulo">Complete seu cadastro</h2>
         <form
           action="./cadastro_concluido.html"
-          class="formulario flex flex--coluna">
+          class="formulario flex flex--coluna"
+        >
           <fieldset>
             <legend class="formulario__legenda">Informações básicas</legend>
             <div class="input-container">
@@ -42,7 +46,8 @@
                 type="text"
                 placeholder="Nome"
                 data-tipo="nome"
-                required />
+                required
+              />
               <label class="input-label" for="nome">Nome</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -56,7 +61,8 @@
                 type="email"
                 placeholder="Email"
                 data-tipo="email"
-                required />
+                required
+              />
               <label class="input-label" for="email">Email</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -72,7 +78,8 @@
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
                 title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos."
                 data-tipo="senha"
-                required />
+                required
+              />
               <label class="input-label" for="senha">Senha</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -89,7 +96,8 @@
                 type="date"
                 placeholder="Data de nascimento"
                 data-tipo="dataNascimento"
-                required />
+                required
+              />
               <label class="input-label" for="nascimento"
                 >Data de nascimento</label
               >
@@ -105,7 +113,8 @@
                 type="text"
                 placeholder="CPF"
                 data-tipo="cpf"
-                required />
+                required
+              />
               <label class="input-label" for="cpf">CPF</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -120,7 +129,11 @@
                 id="cep"
                 class="input"
                 type="text"
-                placeholder="CEP" />
+                placeholder="CEP"
+                pattern="[\d]{5}-?[\d]{3}"
+                data-tipo="cep"
+                required
+              />
               <label class="input-label" for="cep">CEP</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -132,7 +145,10 @@
                 id="logradouro"
                 class="input"
                 type="text"
-                placeholder="Logradouro" />
+                placeholder="Logradouro"
+                data-tipo="logradouro"
+                required
+              />
               <label class="input-label" for="logradouro">Logradouro</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -144,7 +160,10 @@
                 id="cidade"
                 class="input"
                 type="text"
-                placeholder="Cidade" />
+                placeholder="Cidade"
+                data-tipo="cidade"
+                required
+              />
               <label class="input-label" for="cidade">Cidade</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
@@ -156,7 +175,10 @@
                 id="estado"
                 class="input"
                 type="text"
-                placeholder="Estado" />
+                placeholder="Estado"
+                data-tipo="estado"
+                required
+              />
               <label class="input-label" for="estado">Estado</label>
               <span class="input-mensagem-erro"
                 >Este campo não está válido</span
