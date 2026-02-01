@@ -6,16 +6,6 @@ Um projeto de validação de formulários com tema Doguito, desenvolvido com HTM
 
 Este projeto implementa um sistema de validação de formulários para cadastro de clientes e produtos, com uma interface amigável e responsiva. O projeto utiliza validações em tempo real e feedback visual para o usuário.
 
-## 🎯 Funcionalidades
-
-- ✅ Validação de formulários em tempo real
-- ✅ Cadastro de clientes
-- ✅ Cadastro de produtos
-- ✅ Edição de clientes
-- ✅ Listagem de clientes
-- ✅ Interface responsiva
-- ✅ Feedback visual com modais
-- ✅ Tabelas de dados
 
 ## 📁 Estrutura do Projeto
 
@@ -82,12 +72,6 @@ npx http-server
 - **lista_cliente.html** - Listagem de clientes cadastrados
 - **edita_cliente.html** - Edição de dados de cliente
 
-## 🎨 Tecnologias Utilizadas
-
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilização e layout responsivo
-- **JavaScript Vanilla** - Validações e interatividade
-- **SVG** - Ícones e imagens vetoriais
 
 ## ✨ Recursos de Validação
 
@@ -98,25 +82,3 @@ O projeto implementa validações para:
 - Padrões específicos (CPF, telefone, etc.)
 - Feedback em tempo real
 
-## 📝 Estrutura de Arquivos CSS
-
-- **base/** - Estilos base e variáveis globais
-- **componentes/** - Estilos de componentes reutilizáveis
-- **Páginas específicas** - Estilos customizados por página
-
-## 🔧 Desenvolvimento
-
-Para contribuir com o projeto:
-
-1. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-2. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-3. Push para a branch (`git push origin feature/AmazingFeature`)
-4. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
-## 👤 Autor
-
-Felipe Nóbrega - [@FELIPE-NOBREGA06](https://github.com/FELIPE-NOBREGA06)
